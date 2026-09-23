@@ -5,10 +5,13 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import utils.ConfigReader;
+import utils.ScreenshotUtils;
+
 
 public class BaseTest {
 
@@ -37,13 +40,19 @@ public class BaseTest {
         // Open OrangeHRM
         driver.get(ConfigReader.getProperty("url"));
     }
+    
+    
+    public WebDriver getDriver() {
+        return driver;
+    }
+    
 
     @AfterMethod
-    public void tearDown() {
-
+    public void tearDown(ITestResult result) {
+    	
         // Close browser after test
         if (driver != null) {
-           // driver.quit();
+            driver.quit();
         }
     }
 }
