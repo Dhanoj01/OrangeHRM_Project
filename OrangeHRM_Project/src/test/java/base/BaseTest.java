@@ -47,10 +47,9 @@ public class BaseTest {
     }
     
 
-    @AfterMethod
-    public void tearDown(ITestResult result) {
-    	
-        // Close browser after test
+    @AfterMethod(alwaysRun = true)
+    public void tearDown() {
+
         if (driver != null) {
             driver.quit();
         }
