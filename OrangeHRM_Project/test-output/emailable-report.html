@@ -9,14 +9,53 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">OrangeHRM Automation Suite</th></tr>
-<tr><td><a href="#t0">Smoke Tests</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">54,792</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Smoke Tests</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">84,637</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">OrangeHRM Automation Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Smoke Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.AdminTest</td><td><a href="#m0">verifAdminPage</a></td><td rowspan="1">1790006210403</td><td rowspan="1">3608</td></tr><tr class="passedodd"><td rowspan="3">tests.EmployeeTest</td><td><a href="#m1">verifyEmployeeTest</a></td><td rowspan="3">1790006243983</td><td rowspan="3">10050</td></tr><tr class="passedodd"><td><a href="#m2">verifyEmployeeTest</a></td></tr><tr class="passedodd"><td><a href="#m3">verifyEmployeeTest</a></td></tr><tr class="passedeven"><td rowspan="1">tests.LoginTest</td><td><a href="#m4">verifyLogin</a></td><td rowspan="1">1790006202771</td><td rowspan="1">1946</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">OrangeHRM Automation Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Smoke Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.EmployeeTest</td><td><a href="#m0">verifyEmployeeTest</a></td><td rowspan="1">1790510017878</td><td rowspan="1">25169</td></tr><tr class="failedodd"><td rowspan="1">tests.LoginTest</td><td><a href="#m1">verifyLogin</a></td><td rowspan="1">1790509973887</td><td rowspan="1">2713</td></tr><tr><th colspan="4">Smoke Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.AdminTest</td><td><a href="#m2">verifAdminPage</a></td><td rowspan="1">1790509984858</td><td rowspan="1">3065</td></tr><tr class="passedodd"><td rowspan="2">tests.EmployeeTest</td><td><a href="#m3">verifyEmployeeTest</a></td><td rowspan="2">1790509989659</td><td rowspan="2">11126</td></tr><tr class="passedodd"><td><a href="#m4">verifyEmployeeTest</a></td></tr></tbody>
 </table>
-<h2>Smoke Tests</h2><h3 id="m0">tests.AdminTest#verifAdminPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.EmployeeTest#verifyEmployeeTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>Kapil</td><td>Sharma</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.EmployeeTest#verifyEmployeeTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>Dhanoj</td><td>Singh</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">tests.EmployeeTest#verifyEmployeeTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>Sahil</td><td>Kumar</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">tests.LoginTest#verifyLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Smoke Tests</h2><h3 id="m0">tests.EmployeeTest#verifyEmployeeTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>Kapil</td><td></td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //h6[text()=&apos;Personal Details&apos;]&apos;
+(tried for 10 seconds with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at utils.WaitUtils.waitForElementVisible(WaitUtils.java:24)
+	at pages.PimPage.isPersonalDetailsDisplayed(PimPage.java:76)
+	at tests.EmployeeTest.verifyEmployeeTest(EmployeeTest.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h6[text()=&apos;Personal Details&apos;]&quot;}
+  (Session info: chrome=153.0.8010.54)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.45.0&apos;, revision: &apos;cd6a3cd cd6a3cdfca6970f62e5bc8344109d0fe0e2af05e&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.6.2&apos;, java.version: &apos;25.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [daf69c32065c709bca358b098305c4fb, findElement {value=//h6[text()=&apos;Personal Details&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.54, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: /var/folders/9z/9vvkgz_53x5...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50348}, goog:processID: 3628, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:50348/devtoo..., se:cdpVersion: 153.0.8010.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: daf69c32065c709bca358b098305c4fb
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:575)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:173)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:396)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:390)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:365)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:351)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:348)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:210)
+	... 29 more
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.LoginTest#verifyLogin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Testing screenshot expected [true] but found [false]
+	at tests.LoginTest.verifyLogin(LoginTest.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.AdminTest#verifAdminPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.EmployeeTest#verifyEmployeeTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>Dhanoj</td><td>Singh</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">tests.EmployeeTest#verifyEmployeeTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>Sahil</td><td>Kumar</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
