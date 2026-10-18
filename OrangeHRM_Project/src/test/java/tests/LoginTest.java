@@ -1,7 +1,5 @@
 package tests;
 
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -9,6 +7,7 @@ import base.BaseTest;
 import pages.DashboardPage;
 import pages.LoginPage;
 import utils.ConfigReader;
+import utils.ScreenshotUtils;
 import utils.WaitUtils;
 
 public class LoginTest extends BaseTest {
@@ -30,12 +29,11 @@ public class LoginTest extends BaseTest {
      	String actualUrl = driver.getCurrentUrl();
      	
         Assert.assertTrue(actualUrl.contains("dashboard"));
-        
+          
         DashboardPage dashboard = new DashboardPage(driver);
         
         Assert.assertTrue(dashboard.isDashboardDisplayed(),"Dashboard is not displayed");
         
-      
         
   }
 }
