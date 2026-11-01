@@ -4,6 +4,10 @@
 
 <suite name="OrangeHRM Automation Suite">
 
+<listeners>
+    <listener class-name="utils.TestListener"/>
+</listeners>
+
     <test name="Smoke Tests">
 
 <!--
@@ -15,13 +19,15 @@
 
         </groups>
  -->
+ 
         
 
         <classes>
 
             <class name="tests.LoginTest"/>
-             <class name="tests.AdminTest"/>
-             <class name="tests.PimTest"  />
+            <class name="tests.AdminTest"/>
+            <class name="tests.EmployeeTest"/>
+
 
         </classes>
 
